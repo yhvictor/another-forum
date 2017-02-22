@@ -1,0 +1,7 @@
+{
+    "go.buildOnSave": true,
+    "go.lintOnSave": true,
+    "go.coverOnSave": false,
+    "go.useCodeSnippetsOnFunctionSuggest": false,
+    "go.formatOnSave": true
+}
