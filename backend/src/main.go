@@ -26,6 +26,7 @@ func handler(w http.ResponseWriter, r *http.Request) {
 	jsonBody, err := ioutil.ReadAll(r.Body)
 	if err != nil {
 		printError(w, -1)
+		return
 	}
 
 	type Message struct {
@@ -35,6 +36,7 @@ func handler(w http.ResponseWriter, r *http.Request) {
 	var message Message
 	if err = json.Unmarshal(jsonBody, &message); err != nil {
 		printError(w, -1)
+		return
 	}
 
 	log.Printf("{action: %s}", message.Action)
